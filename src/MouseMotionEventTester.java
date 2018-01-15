@@ -1,4 +1,5 @@
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.event.MouseEvent;
@@ -18,7 +19,7 @@ public class MouseMotionEventTester extends JFrame {
         canvas.setBackground(Color.blue);
         canvas.addMouseMotionListener(new MouseMotionEventSpy());
         Container cp = getContentPane();
-        cp.add(canvas, "Center");
+        cp.add(canvas, BorderLayout.CENTER);
     }
 
     private class MouseMotionEventSpy implements MouseMotionListener {
